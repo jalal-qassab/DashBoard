@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/library.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="main-wrapper">
+        <nav class="fixed-top">
+            <header class="header d-flex justify-content-between py-1">
+
+
+                <div class="right-header d-flex align-items-center gap-3">
+                    <div class="logo d-none d-md-block">
+                        <a href="/">Store control panel</a>
+                    </div>
+
+                    <div class="px-3">
+                        <a href="#"> <i class="fa-solid fa-chart-bar" id="toggle-sidebar"></i></a>
+                    </div>
+                    <form action="" class="d-none d-md-block">
+                        <input type="text" class="form-control" placeholder="ُEnter To Search">
+                    </form>
+                </div>
+
+
+
+                <div class="letf-header d-flex align-items-center gap-3 px-3">
+                    <div class="icons d-flex gap-3">
+                        <a href=""><i class="fa-solid fa-headset"></i></a>
+                                               <div class="messages-container position-relative" id="messages-container">
+                            <i class="fa-regular fa-envelope position-relative envelope" ></i>
+                            <ul class="messages-area position-absolute text-center" id="messages-area">
+                                <div class="messages-header">
+                                    <h3>Latest messages</h3>
+                                </div>
+                                <li class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex gap-3 item-menu-left">
+                                        <img src="assets/images/avatar3.png" alt="">
+                                        <h4>Khaled Asfari</h4>
+                                    </div>
+                                    <i class="fa-solid fa-comments"></i>
+                                </li>
+
+                                <li class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex gap-3 item-menu-left">
+                                        <img src="assets/images/avatar5.png" alt="">
+                                        <h4>Sarah Al-Hamdo</h4>
+                                    </div>
+                                    <i class="fa-solid fa-comments"></i>
+                                </li>
+
+                                <li class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex gap-3 item-menu-left">
+                                        <img src="assets/images/avatar2.png" alt="">
+                                        <h4>Qais Gharib</h4>
+                                    </div>
+                                    <i class="fa-solid fa-comments"></i>
+                                </li>
+
+                                <li class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex gap-3 item-menu-left">
+                                        <img src="assets/images/avatar4.png" alt="">
+                                        <h4>Mona Nahhas</h4>
+                                    </div>
+                                    <i class="fa-solid fa-comments"></i>
+                                </li>
+
+                                <li class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex gap-3 item-menu-left">
+                                        <img src="assets/images/avatar1.png" alt="">
+                                        <h4>Mahmoud Rahal</h4>
+                                    </div>
+                                    <i class="fa-solid fa-comments"></i>
+                                </li>
+
+                                <li class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex gap-3 item-menu-left">
+                                        <img src="assets/images/avatar6.png" alt="">
+                                        <h4>Mohammed Issa</h4>
+                                    </div>
+                                    <i class="fa-solid fa-comments"></i>
+                                </li>
+                                <a href="">All messages</a>
+                            </ul>
+                        </div>
+                        <a class="position-relative bell" href=""><i class="fa-regular fa-bell"></i></a>
+                        <a href=""><i class="fa-regular fa-comment"></i></a>
+                    </div>
+                    <div class="avatar">
+                        <img src="assets/images/avatar0.jpeg" alt="">
+                    </div>
+                    <a data-bs-toggle="offcanvas" href="#offcanvasExample"><i class="fa-solid fa-bars-staggered active-users"></i></a>
+                </div>
+            </header>
+        </nav>
+        <div class="sidebar" id="sidebar">
+            <div class="profile">
+                <img width="90px" src="assets/images/avatar0.jpeg" alt="">
+                <h3>Jalal Qassab</h3>
+            </div>
+            <ul class="ul-sidebar">
+                <li class="mb-2 active">
+                    <i class="fa-solid fa-house-user fs-5"></i>
+                    <a href="index.html" class="m-r-10">Main Page</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <a href="" class="m-r-10">Product classifications</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-box-open"></i>
+                    <a href="" class="m-r-10">Products</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-plug"></i>
+                    <a href="" class="m-r-10">Electrical appliances</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-newspaper"></i>
+                    <a href="blog.html" class="m-r-10">Blog</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-users"></i>
+                    <a href="customers.html" class="m-r-10">Workers</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-building-user"></i>
+                    <a href="" class="m-r-10">Importers</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-gear"></i>
+                    <a href="" class="m-r-10">Settings</a>
+                </li>
+            </ul>
+        </div>
+        <div class="content p-3" id="content">
+            <div class="inner-content">
+                <div class="container-fluid">
+                    <h4>All Blogs</h4>
+                    <a href="add-post.html" type="button" class="btn btn-primary mb-2" >
+                        Add a new blog
+                    </a>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card p-3">
+                                <table class="table table-hover table-striped display" id="example">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Blog title</th>
+                                            <th scope="col">Ranking</th>
+                                            <th scope="col">the date</th>
+                                            <th scope="col">Statu</th>
+                                            <th scope="col">Picture</th>
+                                            <th scope="col">Options</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Design secret</td>
+                                            <td>design</td>
+                                            <td>2025/8/28</td>
+                                            <td>
+                                                <div style="width: 10px; height: 10px;"
+                                                    class="spinner-grow text-success" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                Active
+                                            </td>
+                                            <td><img width="50px" src="assets/images/blog1.jpg" alt=""></td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-danger dropdown-toggle btn-sm" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        Options
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-white">
+                                                        <li><a class="dropdown-item active">details</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#delete-blog">delete</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#edit-worker">Edit</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>The power of WordPress</td>
+                                            <td>Sites</td>
+                                            <td>2025/8/30</td>
+                                            <td>
+                                                <div style="width: 10px; height: 10px;"
+                                                    class="spinner-grow text-success" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                Active
+                                            </td>
+                                            <td><img width="50px" src="assets/images/blog2.jpeg" alt=""></td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-danger dropdown-toggle btn-sm" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        Options
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-white">
+                                                        <li><a class="dropdown-item active">details</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#delete-blog">delete</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#edit-worker">Edit</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>The art of photography</td>
+                                            <td>Arts</td>
+                                            <td>2025/9/1</td>
+                                            <td>
+                                                <div style="width: 10px; height: 10px;"
+                                                    class="spinner-grow text-danger" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                No Active
+                                            </td>
+                                            <td><img width="60px" src="assets/images/blog3.png" alt=""></td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-danger dropdown-toggle btn-sm" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        Options
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-white">
+                                                        <li><a class="dropdown-item active">details</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#delete-blog">delete</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#edit-worker">Edit</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>Healthy life</td>
+                                            <td>health</td>
+                                            <td>2025/9/5</td>
+                                            <td>
+                                                <div style="width: 10px; height: 10px;"
+                                                    class="spinner-grow text-success" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                Active
+                                            </td>
+                                            <td><img width="50px" src="assets/images/blog4.jpeg" alt=""></td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-danger dropdown-toggle btn-sm" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        Options
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-white">
+                                                        <li><a class="dropdown-item active">details</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#delete-blog">delete</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#edit-worker">Edit</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- start delete modal  -->
+
+    <div class="modal fade" id="delete-blog" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"> Delete blog</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+
+                    <form>
+
+                        <div class="alert alert-danger">
+                           ? Are you sure about the deletion process 
+                        </div>
+                    </form>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success">Delete data</button>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- end delete modal  -->
+    <!-- Users online -->
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Users online</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+
+            <div class="alert alert-success">
+                All active users
+            </div>
+
+            <div class="item-side-menu d-flex mb-3">
+
+                <div class="avatar-info position-relative">
+                    <div style="width: 10px; height: 10px;" class="spinner-grow text-success grow-user" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <img width="50px" src="assets/images/worker1.png" alt="">
+                    <h4>Wael Hamoud</h4>
+                </div>
+
+
+                <div class="contact-info">
+                    <i class="fa-brands fa-square-whatsapp whatsapp-icon"></i>
+                    <i class="fa-brands fa-facebook-messenger messenger-icon"></i>
+                </div>
+
+
+
+            </div>
+            <div class="item-side-menu d-flex mb-3">
+
+                <div class="avatar-info position-relative">
+                    <div style="width: 10px; height: 10px;" class="spinner-grow text-success grow-user" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <img width="50px" src="assets/images/worker13.png" alt="">
+                    <h4>Salma Abdel Karim</h4>
+                </div>
+
+
+                <div class="contact-info">
+                    <i class="fa-brands fa-square-whatsapp whatsapp-icon"></i>
+                    <i class="fa-brands fa-facebook-messenger messenger-icon"></i>
+                </div>
+
+
+
+            </div>
+            <div class="item-side-menu d-flex mb-3">
+
+                <div class="avatar-info position-relative">
+                    <div style="width: 10px; height: 10px;" class="spinner-grow text-success grow-user" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <img width="50px" src="assets/images/worker9.png" alt="">
+                    <h4>Maysaa Jaber</h4>
+                </div>
+
+
+                <div class="contact-info">
+                    <i class="fa-brands fa-square-whatsapp whatsapp-icon"></i>
+                    <i class="fa-brands fa-facebook-messenger messenger-icon"></i>
+                </div>
+
+
+
+            </div>
+            <div class="item-side-menu d-flex mb-3">
+
+                <div class="avatar-info position-relative">
+                    <div style="width: 10px; height: 10px;" class="spinner-grow text-success grow-user" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <img width="50px" src="assets/images/worker7.png" alt="">
+                    <h4>Alaa Al-Ahmad</h4>
+                </div>
+
+
+                <div class="contact-info">
+                    <i class="fa-brands fa-square-whatsapp whatsapp-icon"></i>
+                    <i class="fa-brands fa-facebook-messenger messenger-icon"></i>
+                </div>
+
+
+
+            </div>
+            <div class="item-side-menu d-flex mb-3">
+
+                <div class="avatar-info position-relative">
+                    <div style="width: 10px; height: 10px;" class="spinner-grow text-success grow-user" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <img width="50px" src="assets/images/worker6.png" alt="">
+                    <h4>Nader Al-Salem</h4>
+                </div>
+
+
+                <div class="contact-info">
+                    <i class="fa-brands fa-square-whatsapp whatsapp-icon"></i>
+                    <i class="fa-brands fa-facebook-messenger messenger-icon"></i>
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script src="assets/js/datatables.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="assets/js/charts.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

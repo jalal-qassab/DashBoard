@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/library.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="main-wrapper">
+        <nav class="fixed-top">
+            <header class="header d-flex justify-content-between py-1">
+
+
+                <div class="right-header d-flex align-items-center gap-3">
+                    <div class="logo d-none d-md-block">
+                        <a href="/">Store control panel</a>
+                    </div>
+
+                    <div class="px-3">
+                        <a href="#"> <i class="fa-solid fa-chart-bar" id="toggle-sidebar"></i></a>
+                    </div>
+                    <form action="" class="d-none d-md-block">
+                        <input type="text" class="form-control" placeholder="ُEnter To Search">
+                    </form>
+                </div>
+
+
+
+               <div class="letf-header d-flex align-items-center gap-3 px-3">
+                    <div class="icons d-flex gap-3">
+                        <a href=""><i class="fa-solid fa-headset"></i></a>
+
+                        <div class="messages-container position-relative" id="messages-container">
+                            <i class="fa-regular fa-envelope position-relative envelope" ></i>
+                            <ul class="messages-area position-absolute text-center" id="messages-area">
+                                <div class="messages-header">
+                                    <h3>Latest messages</h3>
+                                </div>
+                                <li class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex gap-3 item-menu-left">
+                                        <img src="assets/images/avatar3.png" alt="">
+                                        <h4>Khaled Asfari</h4>
+                                    </div>
+                                    <i class="fa-solid fa-comments"></i>
+                                </li>
+
+                                <li class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex gap-3 item-menu-left">
+                                        <img src="assets/images/avatar5.png" alt="">
+                                        <h4>Sarah Al-Hamdo</h4>
+                                    </div>
+                                    <i class="fa-solid fa-comments"></i>
+                                </li>
+
+                                <li class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex gap-3 item-menu-left">
+                                        <img src="assets/images/avatar2.png" alt="">
+                                        <h4>Qais Gharib</h4>
+                                    </div>
+                                    <i class="fa-solid fa-comments"></i>
+                                </li>
+
+                                <li class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex gap-3 item-menu-left">
+                                        <img src="assets/images/avatar4.png" alt="">
+                                        <h4>Mona Nahhas</h4>
+                                    </div>
+                                    <i class="fa-solid fa-comments"></i>
+                                </li>
+
+                                <li class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex gap-3 item-menu-left">
+                                        <img src="assets/images/avatar1.png" alt="">
+                                        <h4>Mahmoud Rahal</h4>
+                                    </div>
+                                    <i class="fa-solid fa-comments"></i>
+                                </li>
+
+                                <li class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex gap-3 item-menu-left">
+                                        <img src="assets/images/avatar6.png" alt="">
+                                        <h4>Mohammed Issa</h4>
+                                    </div>
+                                    <i class="fa-solid fa-comments"></i>
+                                </li>
+                                <a href="">All messages</a>
+                            </ul>
+                        </div>
+
+
+
+                        <a href=""><i class="fa-regular fa-bell"></i></a>
+                        <a href=""><i class="fa-regular fa-comment"></i></a>
+                    </div>
+
+                    <div class="avatar">
+                        <img src="assets/images/avatar0.jpeg" alt="">
+                    </div>
+
+
+                    <a data-bs-toggle="offcanvas" href="#offcanvasExample"><i class="fa-solid fa-bars-staggered active-users"></i></a>
+
+
+
+                </div>
+            </header>
+        </nav>
+        <div class="sidebar" id="sidebar">
+            <div class="profile">
+                <img width="90px" src="assets/images/avatar0.jpeg" alt="">
+                <h3>Jalal Qassab</h3>
+            </div>
+            <ul class="ul-sidebar">
+                <li class="mb-2 active">
+                    <i class="fa-solid fa-house-user fs-5"></i>
+                    <a href="index.html" class="m-r-10">Main Page</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <a href="" class="m-r-10">Product classifications</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-box-open"></i>
+                    <a href="" class="m-r-10">Products</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-plug"></i>
+                    <a href="" class="m-r-10">Electrical appliances</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-newspaper"></i>
+                    <a href="blog.html" class="m-r-10">Blog</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-users"></i>
+                    <a href="customers.html" class="m-r-10">Workers</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-building-user"></i>
+                    <a href="" class="m-r-10">Importers</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-gear"></i>
+                    <a href="" class="m-r-10">Settings</a>
+                </li>
+            </ul>
+        </div>
+        <div class="content p-3" id="content">
+            <div class="inner-content">
+                <div class="container-fluid">
+                    <h4>Workers</h4>
+                    <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#add-worker">
+                        Add a new worker
+                    </button>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card p-3">
+                                <table class="table table-hover table-striped display" id="example">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Customer Name</th>
+                                            <th scope="col">Number</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">Statu</th>
+                                            <th scope="col">Picture</th>
+                                            <th scope="col">Operations</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Muhammad Al-Ahmad</td>
+                                            <td>963934567821+</td>
+                                            <td>mohamad.ahmad91@gemail.com</td>
+                                            <td>
+                                                <div style="width: 10px; height: 10px;"
+                                                    class="spinner-grow text-success" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                Active
+                                            </td>
+                                            <td><img width="50px" src="assets/images/worker1.png" alt=""></td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-danger dropdown-toggle btn-sm" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        Options
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-white">
+                                                        <li><a class="dropdown-item active">details</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#delete-worker">delete</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#edit-worker">Edit</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                       <tr>
+                                            <th scope="row">2</th>
+                                            <td>Ahmed Al-Khatib</td>
+                                            <td>963945223678+</td>
+                                            <td>ahmad.khatib87@gemail.com</td>
+                                            <td>
+                                                <div style="width: 10px; height: 10px;"
+                                                    class="spinner-grow text-success" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                Active
+                                            </td>
+                                            <td><img width="50px" src="assets/images/worker2.png" alt=""></td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-danger dropdown-toggle btn-sm" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        Options
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-white">
+                                                        <li><a class="dropdown-item active">details</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#delete-worker">delete</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#edit-worker">Edit</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Khaled Darwish</td>
+                                            <td>963939112547+</td>
+                                            <td>khaled.darwish92@gemail.com</td>
+                                            <td>
+                                                <div style="width: 10px; height: 10px;"
+                                                    class="spinner-grow text-success" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                Active
+                                            </td>
+                                            <td><img width="50px" src="assets/images/worker3.png" alt=""></td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-danger dropdown-toggle btn-sm" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        Options
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-white">
+                                                        <li><a class="dropdown-item active">details</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#delete-worker">delete</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#edit-worker">Edit</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>Sami Younes</td>
+                                            <td>963948334221+</td>
+                                            <td>sami.younes95@gemail.com</td>
+                                            <td>
+                                                <div style="width: 10px; height: 10px;"
+                                                    class="spinner-grow text-danger" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                No Active
+                                            </td>
+                                            <td><img width="50px" src="assets/images/worker4.png" alt=""></td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-danger dropdown-toggle btn-sm" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        Options
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-white">
+                                                        <li><a class="dropdown-item active">details</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#delete-worker">delete</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#edit-worker">Edit</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">5</th>
+                                            <td>Rami Shahada</td>
+                                            <td>963933455190+</td>
+                                            <td>rami.shahadeh88@gemail.com</td>
+                                            <td>
+                                                <div style="width: 10px; height: 10px;"
+                                                    class="spinner-grow text-danger" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                               No Active
+                                            </td>
+                                            <td><img width="50px" src="assets/images/worker5.png" alt=""></td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-danger dropdown-toggle btn-sm" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        Options
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-white">
+                                                        <li><a class="dropdown-item active">details</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#delete-worker">delete</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#edit-worker">Edit</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">6</th>
+                                            <td>Doaa Taha</td>
+                                            <td>963942666310+</td>
+                                            <td>doa.taha92@gemail.com</td>
+                                            <td>
+                                                <div style="width: 10px; height: 10px;"
+                                                    class="spinner-grow text-success" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                Active
+                                            </td>
+                                            <td><img width="50px" src="assets/images/worker8.png" alt=""></td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-danger dropdown-toggle btn-sm" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        Options
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-white">
+                                                        <li><a class="dropdown-item active">details</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#delete-worker">delete</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#edit-worker">Edit</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">7</th>
+                                            <td>Laila Al-Hussein</td>
+                                            <td>963938741025+</td>
+                                            <td>laila.hussein90@gemail.com</td>
+                                            <td>
+                                                <div style="width: 10px; height: 10px;"
+                                                    class="spinner-grow text-danger" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                               NO Active
+                                            </td>
+                                            <td><img width="50px" src="assets/images/worker9.png" alt=""></td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-danger dropdown-toggle btn-sm" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        Options
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-white">
+                                                        <li><a class="dropdown-item active">details</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#delete-worker">delete</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#edit-worker">Edit</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">8</th>
+                                            <td>Sarah Al-Masry</td>
+                                            <td>963941529678+</td>
+                                            <td>sara.masri89@gemail.com</td>
+                                            <td>
+                                                <div style="width: 10px; height: 10px;"
+                                                    class="spinner-grow text-success" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                Active
+                                            </td>
+                                            <td><img width="50px" src="assets/images/worker10.png" alt=""></td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-danger dropdown-toggle btn-sm" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        Options
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-white">
+                                                        <li><a class="dropdown-item active">details</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#delete-worker">delete</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#edit-worker">Edit</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">9</th>
+                                            <td>Hanaa Qasim</td>
+                                            <td>963936804112+</td>
+                                            <td>hana.qasem96@gemail.com</td>
+                                            <td>
+                                                <div style="width: 10px; height: 10px;"
+                                                    class="spinner-grow text-success" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                Active
+                                            </td>
+                                            <td><img width="50px" src="assets/images/worker11.png" alt=""></td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-danger dropdown-toggle btn-sm" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        Options
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-white">
+                                                        <li><a class="dropdown-item active">details</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#delete-worker">delete</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#edit-worker">Edit</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">10</th>
+                                            <td>Khalil Reem </td>
+                                            <td>963947315204+</td>
+                                            <td>reem.khalil91@gemail.com</td>
+                                            <td>
+                                                <div style="width: 10px; height: 10px;"
+                                                    class="spinner-grow text-success" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                Active
+                                            </td>
+                                            <td><img width="50px" src="assets/images/worker6.png" alt=""></td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-danger dropdown-toggle btn-sm" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        Options
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-white">
+                                                        <li><a class="dropdown-item active">details</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#delete-worker">delete</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#edit-worker">Edit</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">11</th>
+                                            <td>Maha Abdullah</td>
+                                            <td>963931932700+</td>
+                                            <td>maha.abdallah94@gemail.com</td>
+                                            <td>
+                                                <div style="width: 10px; height: 10px;"
+                                                    class="spinner-grow text-danger" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                               NO Active
+                                            </td>
+                                            <td><img width="50px" src="assets/images/worker12.png" alt=""></td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-danger dropdown-toggle btn-sm" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        Options
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-white">
+                                                        <li><a class="dropdown-item active">details</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#delete-worker">delete</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#edit-worker">Edit</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">12</th>
+                                            <td> Nour al-Din Issa</td>
+                                            <td>963943776512+</td>
+                                            <td>nour.issa93@gemail.com</td>
+                                            <td>
+                                                <div style="width: 10px; height: 10px;"
+                                                    class="spinner-grow text-success" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                Active
+                                            </td>
+                                            <td><img width="50px" src="assets/images/worker7.png" alt=""></td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-danger dropdown-toggle btn-sm" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        Options
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-white">
+                                                        <li><a class="dropdown-item active">details</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#delete-worker">delete</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#edit-worker">Edit</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">13</th>
+                                            <td>Rana Diab</td>
+                                            <td>963937648908+</td>
+                                            <td>rana.diab95@gemail.com</td>
+                                            <td>
+                                                <div style="width: 10px; height: 10px;"
+                                                    class="spinner-grow text-success" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                Active
+                                            </td>
+                                            <td><img width="50px" src="assets/images/worker13.png" alt=""></td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-danger dropdown-toggle btn-sm" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        Options
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-white">
+                                                        <li><a class="dropdown-item active">details</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#delete-worker">delete</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#edit-worker">Edit</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">14</th>
+                                            <td>Heba Murad</td>
+                                            <td>963949220813+</td>
+                                            <td>hiba.murad90@gemail.com</td>
+                                            <td>
+                                                <div style="width: 10px; height: 10px;"
+                                                    class="spinner-grow text-danger" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                 NO Active
+                                            </td>
+                                            <td><img width="50px" src="assets/images/worker14.png" alt=""></td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-danger dropdown-toggle btn-sm" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        Options
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-white">
+                                                        <li><a class="dropdown-item active">details</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#delete-worker">delete</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#edit-worker">Edit</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">15</th>
+                                            <td>Fatima Yassin</td>
+                                            <td>963932854667+</td>
+                                            <td>fatima.yassin88@gemail.com</td>
+                                            <td>
+                                                <div style="width: 10px; height: 10px;"
+                                                    class="spinner-grow text-success" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                Active
+                                            </td>
+                                            <td><img width="50px" src="assets/images/worker15.png" alt=""></td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-danger dropdown-toggle btn-sm" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        Options
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-white">
+                                                        <li><a class="dropdown-item active">details</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#delete-worker">delete</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#edit-worker">Edit</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+   <!-- start add modal  -->
+
+<div class="modal fade" id="add-worker" tabindex="-1" aria-labelledby="addWorkerLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="addWorkerLabel">Add a new worker</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <form>
+          <div class="mb-3">
+            <label for="fixerName" class="form-label">Worker Name</label>
+            <input type="text" class="form-control" id="fixerName" placeholder="Please enter the worker's name">
+          </div>
+
+          <div class="row">
+            <div class="mb-3 col">
+              <label for="fixerEmail" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="fixerEmail" placeholder="Please enter your email address">
+            </div>
+            <div class="mb-3 col">
+              <label for="fixerPhone" class="form-label">Phone Number</label>
+              <input type="text" class="form-control" id="fixerPhone" placeholder="Please enter phone number">
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="workerDetails" class="form-label">Details</label>
+            <textarea class="form-control" id="workerDetails"></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label for="workerPic" class="form-label">Choose a picture</label>
+            <input class="form-control" type="file" id="workerPic">
+          </div>
+        </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- end add modal  -->
+
+
+<!-- start edit modal  -->
+
+<div class="modal fade" id="edit-worker" tabindex="-1" aria-labelledby="editWorkerLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="editWorkerLabel">Edit worker details</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <form>
+          <div class="mb-3">
+            <label for="editfixerName" class="form-label">Worker Name</label>
+            <input type="text" class="form-control" id="editfixerName" placeholder="Please enter the worker's name" value="Muhammad Al-Ahmad	">
+          </div>
+
+          <div class="row">
+            <div class="mb-3 col">
+              <label for="editfixerEmail" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="editfixerEmail" placeholder="Please enter your email address" value="mohamad.ahmad91@gemail.com">
+            </div>
+            <div class="mb-3 col">
+              <label for="editfixerPhone" class="form-label">Phone Number</label>
+               <input type="text" class="form-control" id="editfixerPhone" value="963934567821+" placeholder="Please enter phone number">
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="editfixerDetails" class="form-label">Details</label>
+            <textarea class="form-control" id="editfixerDetails"></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label for="editfixerPic" class="form-label">Choose a picture</label>
+            <input class="form-control" type="file" id="editfixerPic">
+          </div>
+        </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- end edit modal  -->
+
+
+    <!-- start delete modal  -->
+
+    <div class="modal fade" id="delete-worker" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"> Edit worker details</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+
+                    <form>
+
+                        <div class="alert alert-danger">
+                            ? Are you sure about the deletion process
+                        </div>
+                    </form>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success">Delete data</button>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- end delete modal  -->
+
+
+
+
+
+
+
+
+
+
+    <!-- Users online -->
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Users online</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+
+            <div class="alert alert-success">
+                All active users
+            </div>
+
+            <div class="item-side-menu d-flex mb-3">
+
+                <div class="avatar-info position-relative">
+                    <div style="width: 10px; height: 10px;" class="spinner-grow text-success grow-user" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <img width="50px" src="assets/images/worker1.png" alt="">
+                    <h4>Wael Hamoud</h4>
+                </div>
+
+
+                <div class="contact-info">
+                    <i class="fa-brands fa-square-whatsapp whatsapp-icon"></i>
+                    <i class="fa-brands fa-facebook-messenger messenger-icon"></i>
+                </div>
+
+
+
+            </div>
+            <div class="item-side-menu d-flex mb-3">
+
+                <div class="avatar-info position-relative">
+                    <div style="width: 10px; height: 10px;" class="spinner-grow text-success grow-user" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <img width="50px" src="assets/images/worker13.png" alt="">
+                    <h4>Salma Abdel Karim</h4>
+                </div>
+
+
+                <div class="contact-info">
+                    <i class="fa-brands fa-square-whatsapp whatsapp-icon"></i>
+                    <i class="fa-brands fa-facebook-messenger messenger-icon"></i>
+                </div>
+
+
+
+            </div>
+            <div class="item-side-menu d-flex mb-3">
+
+                <div class="avatar-info position-relative">
+                    <div style="width: 10px; height: 10px;" class="spinner-grow text-success grow-user" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <img width="50px" src="assets/images/worker9.png" alt="">
+                    <h4>Maysaa Jaber</h4>
+                </div>
+
+
+                <div class="contact-info">
+                    <i class="fa-brands fa-square-whatsapp whatsapp-icon"></i>
+                    <i class="fa-brands fa-facebook-messenger messenger-icon"></i>
+                </div>
+
+
+
+            </div>
+            <div class="item-side-menu d-flex mb-3">
+
+                <div class="avatar-info position-relative">
+                    <div style="width: 10px; height: 10px;" class="spinner-grow text-success grow-user" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <img width="50px" src="assets/images/worker7.png" alt="">
+                    <h4>Alaa Al-Ahmad</h4>
+                </div>
+
+
+                <div class="contact-info">
+                    <i class="fa-brands fa-square-whatsapp whatsapp-icon"></i>
+                    <i class="fa-brands fa-facebook-messenger messenger-icon"></i>
+                </div>
+
+
+
+            </div>
+            <div class="item-side-menu d-flex mb-3">
+
+                <div class="avatar-info position-relative">
+                    <div style="width: 10px; height: 10px;" class="spinner-grow text-success grow-user" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <img width="50px" src="assets/images/worker6.png" alt="">
+                    <h4>Nader Al-Salem</h4>
+                </div>
+
+
+                <div class="contact-info">
+                    <i class="fa-brands fa-square-whatsapp whatsapp-icon"></i>
+                    <i class="fa-brands fa-facebook-messenger messenger-icon"></i>
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="assets/js/datatables.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="assets/js/charts.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
